@@ -3,8 +3,8 @@
    Edita esta sección para reutilizar la plantilla con otro cliente.
    ================================================================ */
 const CONFIG = {
-  businessName: "Sazón",
-  whatsappNumber: "51943621317", // código de país + número, sin '+' ni espacios
+  businessName: "Shirley Food", // nombre del negocio, se muestra en encabezado y pie de página
+  whatsappNumber: "5990551540", // código de país + número, sin '+' ni espacios
   currency: "S/",
 };
 
@@ -18,65 +18,137 @@ const CATEGORIES = ["Todos", "Entradas", "Fondos", "Bebidas", "Postres"];
 const PRODUCTS = [
   {
     id: "p1",
-    name: "Anticuchos de corazón",
-    category: "Entradas",
-    price: 14,
-    img: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
-    desc: "Brochetas marinadas a la brasa, papa dorada y choclo.",
+    name: "Lonchera",
+    category: "Lonchera",
+    price: 12,
+    img: "https://images.unsplash.com/photo-1670710029403-607db8eeec83?w=600&h=400&fit=crop&q=80",
+    desc: "Combo listo para llevar, ideal para el trabajo o el colegio.",
     featured: true,
   },
   {
     id: "p2",
-    name: "Causa rellena",
-    category: "Entradas",
-    price: 12,
-    img: "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=600&q=80",
-    desc: "Causa limeña rellena de pollo, palta y mayonesa de la casa.",
-    featured: false,
-  },
-  {
-    id: "p3",
-    name: "Lomo saltado",
-    category: "Fondos",
-    price: 22,
-    img: "https://images.unsplash.com/photo-1615937691194-97dbd3ecc767?w=600&q=80",
-    desc: "Lomo salteado al wok con papas fritas y arroz.",
+    name: "Sándwich de salpicón de pollo",
+    category: "Sándwich",
+    price: 6,
+    img: "https://images.unsplash.com/photo-1703219342329-fce8488cf443?w=600&h=400&fit=crop&q=80",
+    desc: "Pollo deshilachado con verduras frescas y mayonesa de la casa.",
     featured: true,
   },
   {
+    id: "p3",
+    name: "Sándwich de lomo saltado",
+    category: "Sándwich",
+    price: 7,
+    img: "https://images.unsplash.com/photo-1707750795395-f9a4cababde9?w=600&h=400&fit=crop&q=80",
+    desc: "Lomo salteado al estilo criollo entre pan fresco.",
+    featured: false,
+  },
+  {
     id: "p4",
-    name: "Trucha a la parrilla",
-    category: "Fondos",
-    price: 24,
-    img: "https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?w=600&q=80",
-    desc: "Trucha fresca de laguna, ensalada andina y papas nativas.",
+    name: "Hamburguesa",
+    category: "Sándwich",
+    price: 8,
+    img: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&h=400&fit=crop&q=80",
+    desc: "Con lechuga, tomate y salsas de la casa.",
     featured: false,
   },
   {
     id: "p5",
-    name: "Chicha morada",
-    category: "Bebidas",
-    price: 6,
-    img: "https://images.unsplash.com/photo-1621506821957-1b50ab7bb1c5?w=600&q=80",
-    desc: "Preparada en casa, con piña y especias.",
+    name: "Sándwich de queso",
+    category: "Sándwich",
+    price: 5,
+    img: "https://images.unsplash.com/photo-1716834092510-3be5db563920?w=600&h=400&fit=crop&q=80",
+    desc: "Sencillo y clásico, con queso fresco.",
     featured: false,
   },
   {
     id: "p6",
-    name: "Emoliente tradicional",
-    category: "Bebidas",
+    name: "Sándwich de huevo",
+    category: "Sándwich",
     price: 5,
-    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600&q=80",
-    desc: "Hierbas, linaza y cebada, servido caliente.",
+    img: "https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?w=600&h=400&fit=crop&q=80",
+    desc: "Huevo frito o revuelto a elección.",
     featured: false,
   },
   {
     id: "p7",
-    name: "Suspiro a la limeña",
-    category: "Postres",
-    price: 10,
-    img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80",
-    desc: "Manjar blanco y merengue al oporto.",
+    name: "Sándwich de palta",
+    category: "Sándwich",
+    price: 5,
+    img: "https://images.unsplash.com/photo-1666819604716-7b60a604bb76?w=600&h=400&fit=crop&q=80",
+    desc: "Palta fresca en pan del día.",
+    featured: false,
+  },
+  {
+    id: "p8",
+    name: "Quinua",
+    category: "Bebidas",
+    price: 3,
+    img: "https://images.unsplash.com/photo-1622484212110-0c65f49e6ec6?w=600&h=400&fit=crop&q=80",
+    desc: "Bebida caliente de quinua, nutritiva y reconfortante.",
+    featured: false,
+  },
+  {
+    id: "p9",
+    name: "Quáker",
+    category: "Bebidas",
+    price: 3,
+    img: "https://images.unsplash.com/photo-1702165639524-252a1c1b1ab5?w=600&h=400&fit=crop&q=80",
+    desc: "Avena caliente, clásica y llenadora.",
+    featured: false,
+  },
+  {
+    id: "p10",
+    name: "Maca",
+    category: "Bebidas",
+    price: 3.5,
+    img: "https://images.unsplash.com/photo-1497048297103-b34f2fc1df34?w=600&h=400&fit=crop&q=80",
+    desc: "Bebida energizante a base de maca andina.",
+    featured: false,
+  },
+  {
+    id: "p11",
+    name: "Soya",
+    category: "Bebidas",
+    price: 3,
+    img: "https://images.unsplash.com/photo-1608651057580-4a50b2fc2281?w=600&h=400&fit=crop&q=80",
+    desc: "Bebida caliente de soya.",
+    featured: false,
+  },
+  {
+    id: "p12",
+    name: "Té",
+    category: "Bebidas",
+    price: 2,
+    img: "https://images.unsplash.com/photo-1601390501377-34e129291cdb?w=600&h=400&fit=crop&q=80",
+    desc: "Infusión clásica de té.",
+    featured: false,
+  },
+  {
+    id: "p13",
+    name: "Manzanilla",
+    category: "Bebidas",
+    price: 2,
+    img: "https://images.unsplash.com/photo-1637572815755-c4b80092dce1?w=600&h=400&fit=crop&q=80",
+    desc: "Infusión de manzanilla, suave y relajante.",
+    featured: false,
+  },
+  {
+    id: "p14",
+    name: "Café pasado",
+    category: "Bebidas",
+    price: 3,
+    img: "https://images.unsplash.com/photo-1679941035424-d215b0230472?w=600&h=400&fit=crop&q=80",
+    desc: "Café filtrado, preparado al momento.",
+    featured: false,
+  },
+  {
+    id: "p15",
+    name: "Anís",
+    category: "Bebidas",
+    price: 2,
+    img: "https://images.unsplash.com/photo-1682988452398-ce8385099765?w=600&h=400&fit=crop&q=80",
+    desc: "Infusión de anís, ideal después de comer.",
     featured: false,
   },
 ];
@@ -121,6 +193,7 @@ function init() {
   renderTabs();
   renderMenu();
   updateCartUI();
+  createSakuraPetals();
 
   el.cartToggle.addEventListener("click", openCart);
   el.closeCart.addEventListener("click", closeCart);
@@ -345,6 +418,42 @@ function sendOrderToWhatsApp() {
 
   const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
+}
+
+/* ================================================================
+   PÉTALOS DE SAKURA
+   Capa decorativa, minimalista y no intrusiva: pocos pétalos,
+   caída lenta con leve balanceo. Se respeta prefers-reduced-motion
+   (oculto vía CSS) y se reduce la cantidad en pantallas chicas.
+   ================================================================ */
+function createSakuraPetals() {
+  const container = document.createElement("div");
+  container.className = "sakura-container";
+  container.setAttribute("aria-hidden", "true");
+  document.body.appendChild(container);
+
+  const count = window.innerWidth < 480 ? 8 : 14;
+
+  for (let i = 0; i < count; i++) {
+    const petal = document.createElement("span");
+    petal.className = "petal";
+
+    const size = 8 + Math.random() * 6; // 8–14px
+    const left = Math.random() * 100; // 0–100vw
+    const fallDuration = 10 + Math.random() * 6; // 10–16s
+    const swayDuration = 3 + Math.random() * 3; // 3–6s
+    const negativeDelay = Math.random() * 16; // arranca ya en marcha
+    const opacity = 0.3 + Math.random() * 0.3; // 0.3–0.6
+
+    petal.style.left = `${left}vw`;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size}px`;
+    petal.style.opacity = opacity;
+    petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
+    petal.style.animationDelay = `-${negativeDelay}s, -${negativeDelay}s`;
+
+    container.appendChild(petal);
+  }
 }
 
 /* ================================================================
